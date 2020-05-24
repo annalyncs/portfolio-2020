@@ -1,0 +1,167 @@
+@font-face {
+    font-family: Ogg;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/fonts/Ogg-Roman.eot");
+    src: url("../assets/fonts/Ogg-Roman.woff2") format("woff2"), url("../assets/fonts/Ogg-Roman.woff") format("woff")
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(359deg)
+    }
+
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+body {
+    font-family: aktiv-grotesk, sans-serif;
+    position: relative;
+}
+
+section {
+    padding: 0 10em;
+
+    &:not(.landing) {
+        margin: 5em 0;
+    }
+
+    header {
+        max-width: 275px;
+        height: 50vh;
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: -1;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #D49E8D;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        h2 {
+            font-family: ogg, serif;
+            font-size: 8em;
+            font-weight: 400;
+            color: black;
+            mix-blend-mode: soft-light;
+            margin: 0
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    &.main-nav {
+        position: fixed;
+        top: 50vh;
+
+        transform: rotate(270deg);
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        text-transform: lowercase;
+        left: -9em;
+        font-family: titling-gothic-fb, sans-serif;
+    }
+
+    .main-nav--item {
+        margin: 0 1em;
+        cursor: pointer;
+    }
+
+    .main-nav--list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row-reverse;
+        text-transform: lowercase;
+    }
+
+
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #DED1BD;
+
+    p {
+        width: 60vw;
+        font-size: 5em;
+    }
+
+    span {
+        color: #faf6f2;
+    }
+
+    .landing--badge {
+        max-width: 200px;
+        position: absolute;
+        top: 5em;
+        right: 5em;
+        animation: rotation 12s infinite linear;
+    }
+}
+
+.about {
+
+    .about--content {
+        display: flex;
+
+    }
+
+    .about--text {
+        border-top: 3px solid black;
+        margin: 0 1em;
+    }
+}
+
+.portfolio {
+    header {
+        &:after {
+            background: #B08401;
+        }
+    }
+
+    .web-design-section {
+        display: flex ;
+    }
+}
+
+.contact {
+    header {
+        &:after {
+            background: #ded1bd;
+        }
+    }
+
+    .web-design-section {
+        display: flex ;
+    }
+}
+
+
+
+/*mobile and tablets*/
+@media (min-width: 768px) {
+    .mobile-nav--btn {
+        display: none;
+    }
+}
