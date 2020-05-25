@@ -260,6 +260,10 @@ nav .main-nav--list {
 }
 .contact .contact-links .contact-link-item img {
   max-width: 32px;
+  transition: 0.3s;
+}
+.contact .contact-links .contact-link-item img:hover {
+  transform: scale(1.3);
 }
 
 footer {
@@ -341,6 +345,9 @@ footer {
     display: block;
     position: absolute;
     right: 0;
+  }
+  nav .main-nav--list-wrap .main-nav--list .main-nav--item {
+    margin: 10px;
   }
 
   section {
