@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/Ogg-Roman.eot");
-  src: url("../assets/fonts/Ogg-Roman.woff2") format("woff2"), url("../assets/fonts/Ogg-Roman.woff") format("woff");
+  src: url("../assets/fonts/Ogg-Roman.woff") format("woff");
 }
 @keyframes rotation {
   from {
@@ -18,21 +18,30 @@ body {
   position: relative;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 section {
-  padding: 0 10em;
+  padding: 3em 10em;
+  position: relative;
 }
 section:not(.landing) {
-  margin: 5em 0;
+  background: white;
 }
 section header {
-  max-width: 275px;
-  height: 50vh;
-  margin: 1em auto;
+  max-width: 200px;
+  margin: 3em auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 section header:after {
   content: "";
@@ -46,21 +55,26 @@ section header:after {
   z-index: -1;
 }
 section header h2 {
-  font-family: ogg, serif;
-  font-size: 8em;
+  font-family: Ogg, serif;
+  font-size: 6em;
   font-weight: 400;
   color: black;
   mix-blend-mode: soft-light;
   margin: 0;
+  line-height: 1.8em;
 }
 
 img {
   max-width: 100%;
 }
 
+nav .mobile-nav--btn {
+  display: none;
+}
 nav.main-nav {
   position: fixed;
   top: 50vh;
+  z-index: 10;
   transform: rotate(270deg);
   display: flex;
   align-items: center;
@@ -87,48 +101,187 @@ nav .main-nav--list {
   align-items: center;
   justify-content: left;
   background: #DED1BD;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: -1;
 }
 .landing p {
   width: 60vw;
-  font-size: 5em;
+  font-size: 7.5em;
 }
 .landing span {
   color: #faf6f2;
 }
 .landing .landing--badge {
   max-width: 200px;
-  position: absolute;
-  top: 5em;
-  right: 5em;
+  position: relative;
+  bottom: 8em;
+  right: 0;
   animation: rotation 12s infinite linear;
 }
 
+.about {
+  margin-top: 100vh;
+}
 .about .about--content {
   display: flex;
+}
+.about .about--text-title {
+  font-size: 3em;
 }
 .about .about--text {
   border-top: 3px solid black;
   margin: 0 1em;
+  padding: 0 3em;
+  flex: 1 1 60%;
+}
+.about .about-text--secondary {
+  font-size: 2em;
+}
+.about .about--img {
+  background: url(../assets/about-me%20image.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: left center;
+  background-repeat: no-repeat;
+  flex: 1 1 40%;
+}
+.about .about--img img {
+  opacity: 0;
 }
 
 .portfolio header:after {
   background: #B08401;
 }
+.portfolio .portfolio-resume-content {
+  text-align: center;
+  margin: 2em 0;
+}
 .portfolio .web-design-section {
   display: flex;
+  flex-flow: wrap;
+}
+.portfolio .web-design-item {
+  position: relative;
+  cursor: pointer;
+  flex: 1 1 50%;
+}
+.portfolio .web-design-item figcaption {
+  text-align: center;
+}
+.portfolio .web-design-item .web-design-item--hover {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.portfolio .web-design-item .web-design--overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.portfolio .web-design-item .web-design--overlay a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.portfolio .web-design-item:hover .web-design-item--hover {
+  visibility: visible;
+  opacity: 1;
 }
 
+.contact {
+  text-align: center;
+}
 .contact header:after {
   background: #ded1bd;
 }
-.contact .web-design-section {
+.contact .contact-main {
+  font-size: 1.3em;
+}
+.contact .contact-main span {
+  font-family: Ogg, serif;
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #b08401;
+}
+.contact .contact-links {
   display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #683b2b;
+  color: #faf6f2;
 }
 
 /*mobile and tablets*/
-@media (min-width: 768px) {
-  .mobile-nav--btn {
+@media (max-width: 768px) {
+  nav .mobile-nav--btn {
+    display: block;
+    cursor: pointer;
+    padding-right: 1em;
+  }
+  nav.main-nav {
+    transform: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 1em 0;
+  }
+  nav .main-nav--list-wrap .main-nav--list {
     display: none;
+  }
+  nav .main-nav--list-wrap .main-nav--list.active {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  .landing p {
+    font-size: 3.8em;
+    width: 80%;
+  }
+
+  .about .about--img,
+.about .about--text {
+    flex: 1 1 100%;
+  }
+  .about .about--text {
+    margin-top: 1em;
+    border-top: 0;
+    padding: 0;
+  }
+  .about .about-text--secondary {
+    font-size: 1.3em;
+  }
+  .about .about--content {
+    flex-flow: wrap;
+  }
+
+  .portfolio .web-design-item {
+    flex: 1 1 100%;
+    margin: 2em 0;
   }
 }
 

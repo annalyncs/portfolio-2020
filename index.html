@@ -22,9 +22,10 @@
         <div class="main-nav--title" id="main-nav--title">
             <span class="main-nav--item main-nav--landing" id="main-nav--landing" data-scroll-to="landing">annalyn sarmiento</span>
         </div>
-        <span class="mobile-nav--btn">Menu &#9662;</span>
+
         <div id="main-nav--list-wrap" class="main-nav--list-wrap" tabindex="1">
-            <ul class="dropdown active main-nav--list">
+            <span class="mobile-nav--btn">Menu &#9662;</span>
+            <ul class="main-nav--list">
                 <li class="main-nav--item main-nav--about" id="main-nav--about" data-scroll-to="about">About</li>
                 <li class="main-nav--item main-nav--portfolio" data-scroll-to="portfolio">Portfolio</li>
                 <li class="main-nav--item main-nav--contact" data-scroll-to="contact">Contact</li>
@@ -35,7 +36,7 @@
 
     <!--       LANDING-->
     <section id="landing" class="landing">
-        <p><span>Front end developer</span> and <span>designer</span> in Los Angeles, CA</p>
+        <p><span>Front-end developer</span> and <span>designer</span> in Los Angeles, CA</p>
 
         <div class="landing--badge">
             <img src="/assets/freelance%20badge.png" alt="Currenty Available for Freelance">
@@ -53,13 +54,17 @@
             </div>
             <div class="about--text">
                 <h3 class="h3 about--text-title">hello,</h3>
-                <p>I am an experienced front end developer and designer based in Los Angeles, CA.
-                </p>
+
 
                 <div class="about-text--secondary">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id mi sodales, commodo lacus ultricies, commodo elit. Duis lobortis, lectus ut rutrum dapibus, sem augue bibendum mauris, a dictum nibh augue sed augue. In viverra nulla quis imperdiet auctor. Proin aliquam consequat diam quis dapibus. Sed varius nunc in lectus bibendum, id porta lectus auctor. Aliquam erat volutpat. Aenean viverra dignissim efficitur. Maecenas tincidunt arcu in tempus cursus. Sed felis augue, semper non lectus quis, egestas sollicitudin odio. Sed consequat semper semper.
+                    <p>I am a front-end developer and web designer based in Los Angeles, CA.
                     </p>
+
+                    <p>
+                       I enjoy the creative process of translating the user experience and design to code. When I'm not working you can find me with a good book, trying out new recipes in the kitchen, or enjoying the outdoors.
+                    </p>
+
+                    <p>I’m currently available for freelance work. Let’s talk!</p>
                 </div>
             </div>
         </div>
@@ -71,21 +76,36 @@
             <h2>portfolio</h2>
         </header>
 
+
         <div class="portfolio-content">
             <div class="web-design-section">
                 <div class="web-design-item">
                     <figure class="web-design-item--img">
                         <img src="/assets/wabi%20sabi%20spec%20mock%20up.png" alt="Wabi Sabi Squarespace Design">
-                        <figcaption>"Wabi Sabi" - Spec Site</figcaption>
+                        <figcaption>"Wabi Sabi" - Squarespace Design Spec Site</figcaption>
                     </figure>
+                    <div class="web-design-item--hover">
+                        <img src="/assets/Wabi%20Sabi%20Spec.jpg" alt="Wabi Sabi Squarespace Design Spec">
+                    </div>
+
+                    <div class="web-design--overlay">
+                        <a href="https://vimeo.com/420553028" target="_blank">Link to mock up video</a>
+                    </div>
 
                 </div>
 
                 <div class="web-design-item">
                     <figure class="web-design-item--img">
                         <img src="/assets/twilight%20spec%20mock%20up.png" alt="Twilight Squarespace Design">
-                        <figcaption>"Twilight" - Spec Site</figcaption>
+                        <figcaption>"Twilight" - Squarespace Design Spec Site</figcaption>
                     </figure>
+                    <div class="web-design-item--hover">
+                        <img src="/assets/Twilight%20Spec.jpg" alt="Twilight Squarespace Design Spec">
+                    </div>
+
+                    <div class="web-design--overlay">
+                        <a href="https://vimeo.com/421802312" target="_blank">Link to mock up video</a>
+                    </div>
 
                 </div>
             </div>
@@ -98,19 +118,28 @@
             <h2>contact</h2>
         </header>
 
-        <p>Let's Talk!</p>
-        <p>For general inquiry, find me here:</p>
+        <p class="contact-main"><span>Say hello</span> — <a href="mailto:annalyn.c.s@gmail.com">annalyn.c.s@gmail.com</a></p>
         <div class="contact-links">
-            <div class="contact-link-item contact-email">
-                <a href="mailto:annalyn.c.s@gmail.com">Email</a>
-            </div>
 
             <div class="contact-link-item contact-linkedin">
-                <a href="https://www.linkedin.com/in/annalyn-sarmiento/" target="_blank">Linkedin</a>
+                <a href="https://www.linkedin.com/in/annalyn-sarmiento/" target="_blank">
+
+                    <img src="/assets/icons/linkedin.png" alt="Linkedin" />
+
+                </a>
+            </div>
+
+            <div class="contact-link-item contact-email">
+                <a href="https://dribbble.com/annalyncs" target="_blank">
+
+                    <img src="/assets/icons/dribbble.png" alt="Dribbble" />
+                </a>
             </div>
 
             <div class="contact-link-item contact-github">
-                <a href="https://github.com/annalyncs" target="_blank">Github</a>
+                <a href="https://github.com/annalyncs" target="_blank">
+                    <img src="/assets/icons/github.png" alt="Github" />
+                </a>
             </div>
 
 
@@ -124,5 +153,5 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 </body></html>
