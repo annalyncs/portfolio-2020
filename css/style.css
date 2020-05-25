@@ -183,6 +183,7 @@ nav .main-nav--list {
 }
 .about .about--img img {
   opacity: 0;
+  visibility: hidden;
 }
 
 .portfolio header:after {
