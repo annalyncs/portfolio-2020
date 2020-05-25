@@ -76,6 +76,7 @@ jQuery(document).ready(function ($) {
     function mobileMenu() {
         $('.mobile-nav--btn').on('click', function () {
             $('.main-nav--list').toggleClass('active');
+            $('.menu').toggleClass('close');
         });
     }
 

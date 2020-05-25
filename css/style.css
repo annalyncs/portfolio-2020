@@ -273,6 +273,52 @@ footer {
     cursor: pointer;
     padding-right: 1em;
   }
+  nav .icon {
+    height: 30px;
+  }
+  nav .menu {
+    position: relative;
+    background: #000;
+    width: 25px;
+    height: 3px;
+    margin-top: 0;
+    margin-left: 12.5px;
+    border-radius: 50px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    right: 0.5em;
+    top: 0.7em;
+  }
+  nav .menu:before, nav .menu:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 50px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav .menu:before {
+    top: -7px;
+  }
+  nav .menu:after {
+    top: 7px;
+  }
+  nav #menu-1.close {
+    background: transparent;
+  }
+  nav #menu-1.close:before, nav #menu-1.close:after {
+    top: 0;
+  }
+  nav #menu-1.close:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  nav #menu-1.close:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
   nav.main-nav {
     transform: none;
     flex-direction: row;

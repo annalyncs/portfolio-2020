@@ -339,6 +339,57 @@ footer {
             padding-right: 1em;
         }
 
+        .icon {
+            height: 30px;
+        }
+
+        .menu {
+            position: relative;
+            background: #000;
+            width: 25px;
+            height: 3px;
+            margin-top: 0;
+            margin-left: 12.5px;
+            border-radius: 50px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            right: 0.5em;
+            top: 0.7em;
+        }
+
+        .menu:before, .menu:after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: #000;
+            border-radius: 50px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        .menu:before {
+            top: -7px;
+        }
+        .menu:after {
+            top: 7px;
+        }
+
+        #menu-1.close {
+            background: transparent;
+        }
+        #menu-1.close:before, #menu-1.close:after {
+            top: 0;
+        }
+        #menu-1.close:before {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        #menu-1.close:after {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
         &.main-nav {
             transform: none;
             flex-direction: row;
