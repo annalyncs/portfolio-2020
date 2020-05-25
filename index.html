@@ -20,31 +20,35 @@
     <!--   NAV -->
     <nav role="navigation" class="main-nav">
         <div class="main-nav--title" id="main-nav--title">
-            <span class="main-nav--item main-nav--landing" id="main-nav--landing" data-scroll-to="landing">annalyn sarmiento</span>
+            <span class="main-nav--item main-nav--landing hover-underline" id="main-nav--landing" data-scroll-to="landing">annalyn sarmiento</span>
         </div>
 
         <div id="main-nav--list-wrap" class="main-nav--list-wrap" tabindex="1">
             <span class="mobile-nav--btn">Menu &#9662;</span>
             <ul class="main-nav--list">
-                <li class="main-nav--item main-nav--about" id="main-nav--about" data-scroll-to="about">About</li>
-                <li class="main-nav--item main-nav--portfolio" data-scroll-to="portfolio">Portfolio</li>
-                <li class="main-nav--item main-nav--contact" data-scroll-to="contact">Contact</li>
+                <li class="main-nav--item main-nav--about hover-underline" id="main-nav--about" data-scroll-to="about">About</li>
+                <li class="main-nav--item main-nav--portfolio hover-underline" id="main-nav--portfolio" data-scroll-to="portfolio">Portfolio</li>
+                <li class="main-nav--item main-nav--contact hover-underline" id="main-nav--contact" data-scroll-to="contact">Contact</li>
             </ul>
         </div>
     </nav>
 
 
     <!--       LANDING-->
-    <section id="landing" class="landing">
-        <p><span>Front-end developer</span> and <span>designer</span> in Los Angeles, CA</p>
+    <section id="landing" class="landing frontpage-section">
+        <div class="landing-wrap">
+            <p><span>Front-end developer</span> and <span>designer</span> in Los Angeles, CA</p>
 
-        <div class="landing--badge">
-            <img src="/assets/freelance%20badge.png" alt="Currenty Available for Freelance">
+            <div class="landing--badge">
+                <img src="/assets/freelance%20badge.png" alt="Currenty Available for Freelance">
+            </div>
         </div>
     </section>
 
+    <div id="spacer"></div>
+
     <!--        ABOUT-->
-    <section id="about" class="about">
+    <section id="about" class="about frontpage-section">
         <header>
             <h2>about</h2>
         </header>
@@ -61,7 +65,7 @@
                     </p>
 
                     <p>
-                       I enjoy the creative process of translating the user experience and design to code. When I'm not working you can find me with a good book, trying out new recipes in the kitchen, or enjoying the outdoors.
+                        I enjoy the creative process of translating the user experience and design to code. When I'm not working you can find me with a good book, trying out new recipes in the kitchen, or enjoying the outdoors.
                     </p>
 
                     <p>I’m currently available for freelance work. Let’s talk!</p>
@@ -71,7 +75,7 @@
     </section>
 
     <!--       PORTFOLIO-->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio frontpage-section">
         <header>
             <h2>portfolio</h2>
         </header>
@@ -113,12 +117,13 @@
     </section>
 
     <!--        CONTACT-->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact frontpage-section">
         <header>
             <h2>contact</h2>
         </header>
 
-        <p class="contact-main"><span>Say hello</span> — <a href="mailto:annalyn.c.s@gmail.com">annalyn.c.s@gmail.com</a></p>
+        <p class="contact-main"><span>Say hello</span> — <a href="mailto:annalyn.c.s@gmail.com" class="hover-underline">annalyn.c.s@gmail.com</a></p>
+        <p>or find me here:</p>
         <div class="contact-links">
 
             <div class="contact-link-item contact-linkedin">

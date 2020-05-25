@@ -18,13 +18,28 @@ body {
   position: relative;
 }
 
-a {
+.hover-underline {
   color: black;
   text-decoration: none;
+  position: relative;
 }
 
-a:hover {
-  text-decoration: underline;
+.hover-underline:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.hover-underline:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 section {
@@ -35,11 +50,9 @@ section:not(.landing) {
   background: white;
 }
 section header {
-  max-width: 200px;
-  margin: 3em auto;
+  margin: 3em auto 5em auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -47,7 +60,7 @@ section header:after {
   content: "";
   display: block;
   width: 100%;
-  height: 100%;
+  height: 40%;
   background: #D49E8D;
   position: absolute;
   left: 0;
@@ -61,7 +74,6 @@ section header h2 {
   color: black;
   mix-blend-mode: soft-light;
   margin: 0;
-  line-height: 1.8em;
 }
 
 img {
@@ -87,28 +99,49 @@ nav .main-nav--item {
   margin: 0 1em;
   cursor: pointer;
 }
+nav .main-nav--item.selected:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  background: #DED1BD;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
 nav .main-nav--list {
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: row-reverse;
   text-transform: lowercase;
+  transition: visibility 0s, opacity 0.5s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#spacer {
+  height: 100vh;
 }
 
 .landing {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: left;
   background: #DED1BD;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: -1;
 }
+.landing .landing-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100%;
+}
 .landing p {
   width: 60vw;
-  font-size: 7.5em;
+  font-size: 7em;
 }
 .landing span {
   color: #faf6f2;
@@ -121,9 +154,6 @@ nav .main-nav--list {
   animation: rotation 12s infinite linear;
 }
 
-.about {
-  margin-top: 100vh;
-}
 .about .about--content {
   display: flex;
 }
@@ -143,7 +173,7 @@ nav .main-nav--list {
   background: url(../assets/about-me%20image.jpg);
   background-size: contain;
   background-attachment: fixed;
-  background-position: left center;
+  background-position: left 10em;
   background-repeat: no-repeat;
   flex: 1 1 40%;
 }
@@ -217,8 +247,11 @@ nav .main-nav--list {
 .contact .contact-links {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-around;
-  margin: 2em 0;
+  justify-content: center;
+  margin: 2em 0 5em 0;
+}
+.contact .contact-links .contact-link-item {
+  margin: 0 3em;
 }
 
 footer {
@@ -247,6 +280,8 @@ footer {
   }
   nav .main-nav--list-wrap .main-nav--list {
     display: none;
+    visibility: visible;
+    opacity: 1;
   }
   nav .main-nav--list-wrap .main-nav--list.active {
     display: block;
