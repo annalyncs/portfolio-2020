@@ -309,6 +309,7 @@ footer {
   }
   .about .about--img {
     background-attachment: scroll;
+    background-position: center center;
   }
   .about .about--text {
     margin-top: 1em;
