@@ -385,6 +385,10 @@ footer {
             flex: 1 1 100%;
         }
 
+        .about--img {
+            background-attachment: scroll;
+        }
+
         .about--text {
             margin-top: 1em;
             border-top: 0;
