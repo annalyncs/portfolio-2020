@@ -258,6 +258,9 @@ nav .main-nav--list {
 .contact .contact-links .contact-link-item {
   margin: 0 2em;
 }
+.contact .contact-links .contact-link-item img {
+  max-width: 32px;
+}
 
 footer {
   text-align: center;
