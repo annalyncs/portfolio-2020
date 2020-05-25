@@ -13,6 +13,10 @@
     transform: rotate(0deg);
   }
 }
+:focus {
+  outline: none;
+}
+
 body {
   font-family: aktiv-grotesk, sans-serif;
   position: relative;

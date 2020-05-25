@@ -16,6 +16,10 @@
     }
 }
 
+:focus {
+    outline: none;
+}
+
 body {
     font-family: aktiv-grotesk, sans-serif;
     position: relative;
@@ -124,6 +128,7 @@ nav {
         }
     }
 
+
     .main-nav--list {
         padding: 0;
         list-style: none;
@@ -133,6 +138,8 @@ nav {
         transition: visibility 0s, opacity 0.5s linear;
         visibility: hidden;
         opacity: 0;
+
+
     }
 
 
@@ -353,6 +360,8 @@ footer {
                     position: absolute;
                     right: 0;
                 }
+
+
             }
         }
     }
